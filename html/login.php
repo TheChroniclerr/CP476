@@ -16,7 +16,7 @@ $error = 0;
 
 // Check for login request
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	if ($_POST["username"] == $default_username and $_POST["password"] = $default_password) {
+	if ($_POST["username"] == $default_username and $_POST["password"] == $default_password) {
 		$error = 0;
 		$_SESSION["user"] = $_POST["username"]; // set session user
 		header("Location: dashboard.php"); // redirect to user dashboard

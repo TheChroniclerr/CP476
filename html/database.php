@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["user"])) {
+	header("Location: login.php");
+	exit();
+}
+
+if(!isset($_SESSION["password"])) {
+	header("Location: connection.php");
+	exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,6 +61,7 @@
 </style>
 </head>
 <body>
+<a rel="table creation code" href="..\create_table.md">Submit this code to create tables</a>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <h3><label for="query">Query:</label></h3>
     <textarea class="query-input-field" id="query" name="query">SELECT * FROM course_table</textarea><br>
@@ -85,15 +100,17 @@ function displayContent($result, $style) {
 	echo "</table></div>";
 }
 
+/*
 $servername = "localhost";
 $port = "3307";
 $dbname = "cp476";
 $username = "mysql.CP476";
 $password = "1111";
+*/
 
 try {
 	// Connect to database
-	$conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);
+	$conn = new PDO("mysql:host={$_SESSION['servername']};port={$_SESSION['port']};dbname={$_SESSION['dbname']};", $_SESSION["username"], $_SESSION["password"]);
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	echo "connection success";
 	// Fetch data as associative array
