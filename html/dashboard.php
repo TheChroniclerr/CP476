@@ -16,7 +16,7 @@ if (!isset($_SESSION["user"])) {
 <body>
 <h1>Welcome, <?php echo $_SESSION["user"];?>!</h1>
 <a rel="connection" href="connection.php">Connect to MySql database</a><br>
-<a rel="database" href="database.php">Go to database (only after connection)</a><br>
+<a rel="database" href="database.php">Go to database</a><br>
 <a title="don't click" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Don't Click</a><br>
 <form action="/html/logout.php" method="post">
 	<input type="submit" value="Logout">

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.connection-field div {
+	display: flex;
+	margin: 4px;
+}
+.connection-field label {
+	flex 1;
+	min-width: 200px;
+	text-align: left;
+	font-weight: bold;
+}
+.connection-field input {
+	flex 2;
+	text-align: left;
+}

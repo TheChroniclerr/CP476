@@ -39,6 +39,7 @@ this should return some test records.
 - MySql connection page.
 
 # Todo
+- MySql connect reprogram, remove dbname, add default_asso, use prepare
 - Web icon.
 - Logout...
 - Connection to database redirect.
@@ -50,6 +51,15 @@ this should return some test records.
 - Multiple accounts, account information saved in MySql.
 - Security implementations.
 - https??
+
+# Updates
+- Reformat connection syntax.
+- Make dbname optional for connection.
+- Allow query operations different for each query type.
+- Make connection page use relative reference (modular design).
+- Combine connection with database.
+- Deprecate connection.php.
+This version is unstable; it is a transition stage.
 
 # Image Source
 Lock icon source: https://www.flaticon.com/free-icon/lock_891399?term=lock&page=1&position=1&origin=search&related_id=891399
