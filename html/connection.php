@@ -10,9 +10,9 @@ if(!isset($_SESSION["user"])) {
 <!DOCTYPE html>
 <html>
 <head>
-<link rel = "stylesheet" href="/lib/connection/main.css">
+<link rel ="stylesheet" href="/lib/modules/db_connection/main.css">
 </head>
 <body>
-<?php include('../lib/connection/main.php'); ?>
+<?php include('../lib/modules/db_connection/main.php'); ?>
 </body>
 </html>

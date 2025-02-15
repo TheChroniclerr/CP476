@@ -1,0 +1,23 @@
+/*
+	Database input field stylesheet .css
+*/
+.query-field-hidden {
+	display: none;
+}
+.query-field textarea{
+    width: 100%;
+    height: 100px;
+	box-sizing: border-box;
+	background-color: #D3D3D3;
+    resize: none; /* Prevents resizing if not needed */
+}
+.query-field textarea::placeholder {
+    vertical-align: top;
+}
+.query-field div {
+	display: flex;
+}
+.query-field input[type="submit"],
+.query-field input[type="reset"] {
+	margin: 0 2px;
+}

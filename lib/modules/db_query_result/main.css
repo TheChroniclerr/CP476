@@ -1,0 +1,27 @@
+/*
+	Database result table stylesheet .css
+*/
+.query-table-container {
+	width: 100%;
+	overflow: auto;
+	white-space: nowrap;
+}
+.query-table {
+	border: none;
+	border-collapse: collapse;
+}
+.query-table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+.query-table th, td {
+	text-align: left;
+	padding: 8px;
+}
+.query-table th {
+	text-align: center;
+	background-color: #9E9E9E;
+	font-weight: bold;
+}
+.query-table tr:hover {
+	background-color: #d0ebff;
+}

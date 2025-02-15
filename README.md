@@ -53,13 +53,21 @@ this should return some test records.
 - https??
 
 # Updates
+## 2025-02-14
 - Reformat connection syntax.
 - Make dbname optional for connection.
 - Allow query operations different for each query type.
 - Make connection page use relative reference (modular design).
 - Combine connection with database.
 - Deprecate connection.php.
-This version is unstable; it is a transition stage.
+## 2025-02-15
+- Modularize connection field.
+- Modularize query field.
+- Modularize query result field.
+- Add connection disconnect button
+- Show settings in connection if already connected.
+- Add connection header.
+- Fix connection buttons spacing. 
 
 # Image Source
 Lock icon source: https://www.flaticon.com/free-icon/lock_891399?term=lock&page=1&position=1&origin=search&related_id=891399

@@ -1,3 +1,6 @@
+/*
+	Database connection stylesheet .css
+*/
 @charset "UTF-8";
 .connection-field div {
 	display: flex;
@@ -12,4 +15,8 @@
 .connection-field input {
 	flex 2;
 	text-align: left;
+}
+.connection-field input[type="submit"], 
+.connection-field input[type="reset"] {
+	margin: 0 2px;
 }
