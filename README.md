@@ -39,6 +39,10 @@ this should return some test records.
 - MySql connection page.
 
 # Todo
+- add session start to all modules???
+- rename module variable to folder name
+- fix database margin.
+
 - MySql connect reprogram, remove dbname, add default_asso, use prepare
 - Web icon.
 - Logout...
@@ -67,7 +71,19 @@ this should return some test records.
 - Add connection disconnect button
 - Show settings in connection if already connected.
 - Add connection header.
-- Fix connection buttons spacing. 
+- Fix connection buttons spacing.
+## 2025-02-16
+- Add top navigation menu.
+- Add main contents' side margin.
+- Re-stylize all of the above from floating to flex-box layout.
+- Implement topnav redirection.
+- Implement topnav login/logout.
+- Implement dashboard guest mode.
+- Modularize topnav.
+- Implement working topnav for all web pages.
 
-# Image Source
-Lock icon source: https://www.flaticon.com/free-icon/lock_891399?term=lock&page=1&position=1&origin=search&related_id=891399
+# Sources
+Lock icon: https://www.flaticon.com/free-icon/lock_891399?term=lock&page=1&position=1&origin=search&related_id=891399
+Color Palettes:
+- Clay: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
+- Gray-scale: https://coolors.co/595959-7f7f7f-a5a5a5-cccccc-f2f2f2

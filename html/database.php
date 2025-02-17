@@ -10,12 +10,21 @@ if(!isset($_SESSION["user"])) {
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="/lib/topnav/main.css">
 <link rel="stylesheet" href="/lib/modules/db_connection/main.css">
 <link rel="stylesheet" href="/lib/modules/db_query_result/main.css">
 <link rel="stylesheet" href="/lib/modules/db_query/main.css">
+<style>
+body {
+	margin: 0;
+}
+</style>
 </head>
 <body>
 <?php 
+$topnav_currpage = "Database";
+include('../lib/topnav/main.php');
+
 include('../lib/modules/db_connection/main.php');
 
 $query_display = "query-field-hidden";
