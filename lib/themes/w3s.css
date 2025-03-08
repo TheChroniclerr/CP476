@@ -29,3 +29,14 @@
 	--text-color: #ffffff;
     --background-color: #222222;
 }
+
+.w3s-theme {
+    --primary: #1D2A35;
+    --primary-variant: #0D1721;
+	--secondary: #282A35;
+	--secondary-variant: #FFF4A3;
+    --accent: #04AA6D;
+	--accent-variant: #193D3D;
+	--text: #E2E2E2;
+	--text-variant: #DDDFE5;
+}

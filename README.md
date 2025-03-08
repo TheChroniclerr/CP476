@@ -39,8 +39,19 @@ this should return some test records.
 - MySql connection page.
 
 # Todo
+- Implement default webpage header metadatas.
+- Design website logo.
+- Implement website logo as favicon.
+- Add Roboto Regular custom font.
+- Modularize font-family.css.
+- Modularize login page.
+- Remove deprecated webpages.
+
+- change color theme.
+- document module dependencies.
 - add session start to all modules???
-- rename module variable to folder name
+- rename module variable to folder name.
+- remove deprecated webpages
 - fix database margin.
 
 - MySql connect reprogram, remove dbname, add default_asso, use prepare
@@ -81,6 +92,14 @@ this should return some test records.
 - Implement dashboard guest mode.
 - Modularize topnav.
 - Implement working topnav for all web pages.
+## 2025-03-08
+- Implement default webpage header metadatas.
+- Design website logo.
+- Implement website logo as favicon.
+- Add Roboto Regular custom font.
+- Modularize font-family.css.
+- Modularize login page.
+- Remove deprecated webpages.
 
 # Sources
 Lock icon: https://www.flaticon.com/free-icon/lock_891399?term=lock&page=1&position=1&origin=search&related_id=891399

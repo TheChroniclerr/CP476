@@ -1,0 +1,12 @@
+/*
+	Font family stylesheet .css
+*/
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url("/lib/fonts/Roboto-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: "Roboto-Regular", Arial, Helvetica, sans-serif
+}

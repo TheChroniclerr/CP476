@@ -1,0 +1,15 @@
+/*
+	Login page stylesheet .css
+*/
+.login-container {
+	max-width: 300px; /* Auto-adjust when screen width < 300px */
+	margin: auto;
+	background-color: #FFF4A3;
+}
+.login-container input[type="text"], input[type="password"] {
+	width: 100%;
+	box-sizing: border-box; /* Adjust field width with respect to container padding */
+}
+.login-container div {
+	color: #FF0000;
+}

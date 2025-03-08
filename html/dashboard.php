@@ -4,34 +4,42 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/lib/topnav/main.css">
-<style>
-* {
-	box-sizing: border-box;
-}
-body {
-	margin: 0; /* remove webpage default spacing */
-}
+	<title>Dashboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Hubert Bao">
+	<meta name="description" content="Homepage navigation dashboard.">
+	<link rel="icon" href="/lib/favicon/favicon.ico">
+	<link rel="preload" href="/lib/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="">
+	<link rel="stylesheet" href="/lib/fonts/font_family.css">
+	<link rel="stylesheet" href="/lib/topnav/main.css">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0; /* remove webpage default spacing */
+		}
 
-#page_body {
-	display: flex;
-	justify-content: left;
-	width: 100%;
-	min-height: calc(100vh - 50px); /* web page always fills the full viewport height */
-	overflow: auto; /* allow scrolling if content overflows */
-	flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
-}
-#page_body div {
-	width: 15%;
-}
-#page_body .contents {
-	width: 70%;
-	padding: 15px;
-	border-width: 0 1px; /* Top Bottom | Left Right */
-	border-style: solid;
-	border-color: #38444d;
-}
-</style>
+		#page_body {
+			display: flex;
+			justify-content: left;
+			width: 100%;
+			min-height: calc(100vh - 50px); /* web page always fills the full viewport height */
+			overflow: auto; /* allow scrolling if content overflows */
+			flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+		}
+		#page_body div {
+			width: 15%;
+		}
+		#page_body .contents {
+			width: 70%;
+			padding: 15px;
+			border-width: 0 1px; /* Top Bottom | Left Right */
+			border-style: solid;
+			border-color: #333333;
+		}
+	</style>
 </head>
 <body>
 <?php
