@@ -29,6 +29,7 @@
 		unset($_SESSION["password"]);
 	}
 	// Update session information before display form
+	$dbc_fmsg = "";
 	if ($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST["disconnect"])) {
 		unset_connection();
 	} else if ($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST["connect"]) and isset($_POST["password"])) {

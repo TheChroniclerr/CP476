@@ -1,34 +1,39 @@
 # Configuration
-1. Copy all files into htdocs.
-If use command line, then clone the repository (delete .git if you want, so localhost cannot access it, but then syncing updates becomes annoying).
-2. Check Apache configuration by going to: http://localhost/index.html
-If you followed the steps in myls correctly, it should display a web page.
+1. Copy all files into `htdocs`.
+If you use command line, then clone the repository (delete .git if you want, so localhost cannot access it, but then syncing updates becomes annoying)
+2. Check Apache configuration by going to: http://localhost/html/index.html
 3. Check PHP configuration by going to: http://localhost/html/phpinfo.php
-If you followed the steps in myls correctly, it should display a web page.
 4. Go to command line and enter:
-\>mysql -u root -p
-\>(enter your password)
-\>CREATE DATABASE IF NOT EXISTS `cp476`
-CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-(this creates a local database on your device)
-
+```shell
+> mysql -u root -P 3306 -p
+> (enter your password):
+```
+You can execute contents of `create_table.txt` here, but it should also work on `database.php`
 # Testing
-1. Goto: http://localhost/html/login.php
-2. Default admin account
-Username: admin
-Password: admin
-if login is successful, you will be redirected to the dashboard automatically
-3. Click the first link to goto: http://localhost/html/connection.php
-4. Login using the password you created following installation guide on myls
-Everything else should be just as the suggestion.
-5. Goto http://localhost/html/database.php
-5. Copy content from http://localhost/create_table.md and past it into query, press submit.
-This initializes all tables onto database 'cp476'.
-6. Run: SELECT \* FROM name_table
-this should return no record found.
-7. SELECT \* FROM course_table
-this should return some test records.
-
+1. Login
+	- Go to: http://localhost/html/login.php
+	- Default admin account
+		Username: admin
+		Password: admin
+	- If login is successful, you will be automatically redirected to the dashboard
+2. Connect to MySQL
+	- Go to: http://localhost/html/database.php
+		- Or just click "Database" on dashboard
+	- Use the password you created following installation guide on Myls
+	- Everything else should be same the suggestion
+3. Create database
+	- Go to: http://localhost/create_table.txt
+	- Copy its contents, paste into query in `database.php`, then press submit
+	- This creates `cp476` database and all its tables
+4. Test query
+Show all records from `name` table:
+```Mysql
+SELECT * FROM name
+```
+Show all records from `course` table:
+```Mysql
+SELECT * FROM course
+```
 # Features
 - Stylized.
 - Save user sessions.
@@ -39,17 +44,13 @@ this should return some test records.
 - MySql connection page.
 
 # Todo
-- change color theme.
-- Fix ReadMe
-- Fix database
-
+- Change color theme.
 - Write reports.
-- Create seperate .css files.
 - Multiple accounts, account information saved in MySql.
-- Security implementations.
-- https??
+- Security implementations (prepare, https).
 
 # Updates
+
 ## 2025-02-14
 - Reformat connection syntax.
 - Make dbname optional for connection.
@@ -88,7 +89,12 @@ this should return some test records.
 - Refactor webpage directory variables for module paths.
 - Include session start on all webpages.
 - Stylize code.
-
+## 2025-03-09
+- Fix database key.
+- Add database data.
+- Implement unsafe multi-query request.
+- Update README.txt.
+- Add logo on topnav.
 # Sources
 Lock icon: https://www.flaticon.com/free-icon/lock_891399?term=lock&page=1&position=1&origin=search&related_id=891399
 Color Palettes:

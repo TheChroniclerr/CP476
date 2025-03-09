@@ -20,7 +20,7 @@
 <form class="<?php echo $query_display;?>" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <h3><label for="query">Query:</label></h3>
 	<a rel="table creation code" href="..\create_table.md">Submit this code to create tables</a>
-    <textarea class="query-input-field" id="query" name="query">SELECT * FROM course_table</textarea>
+    <textarea class="query-input-field" id="query" name="query">SELECT * FROM course</textarea>
 	<div>
 		<input type="submit" value="Submit">
 		<input type="reset" value="Reset">
@@ -39,6 +39,10 @@
 			return new PDO($dsn, $_SESSION["username"], $_SESSION["password"], $options);	
 		}
 	}
+	function execute_query(&$conn, $query, &$arr) {
+		$conn->exec($query);
+		array_push($arr, "<div>Query successful.</div>");
+	}
 	function fetch_SELECT(&$conn, $query, &$arr) {
 		$stmt = $conn->prepare("EXPLAIN $query");
 		$stmt->execute();
@@ -56,16 +60,6 @@
 		array_push($arr, "<h2>Data</h2>");
 		array_push($arr, $stmt->fetchAll());
 	}
-
-	// Test values
-	/*
-	$servername = "localhost";
-	$port = "3307";
-	$dbname = "cp476";
-	$username = "mysql.CP476";
-	$password = "1111";
-	*/
-
 	// Procedure
 	if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST["query"]) and isset($_SESSION["password"])) {
 		try {
@@ -78,7 +72,8 @@
 			} else if ($query_type == "SHOW") {
 				fetch_SHOW($conn, $_POST["query"], $_SESSION["query"]);
 			} else {
-				array_push($_SESSION["query"], "<div>Unidentified query.</div>");
+				// Unsafe multi-query executions
+				execute_query($conn, $_POST["query"], $_SESSION["query"]);
 			}
 		} catch(PDOException $e) {
 			echo "Error: " . $e->getMessage();

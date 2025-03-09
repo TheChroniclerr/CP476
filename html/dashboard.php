@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Hubert Bao">
 	<meta name="description" content="Homepage navigation dashboard.">
-	<link rel="icon" href="/lib/favicon/favicon.ico">
+	<link rel="icon" href="/images/favicon.ico">
 	<link rel="preload" href="/lib/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="">
 	<link rel="stylesheet" href="/lib/fonts/font_family.css">
 	<link rel="stylesheet" href="/lib/topnav/main.css">
@@ -32,12 +32,14 @@
 		}
 		#page_body div {
 			width: 15%;
+			background-color: #F1F1F1;
 		}
 		#page_body .contents {
 			width: 70%;
 			padding: 15px;
-			border-width: 0 1px; /* Top Bottom | Left Right */
+			background-color: #F1F1F1;
 			border-style: solid;
+			border-width: 0 1px; /* Top Bottom | Left Right */
 			border-color: #333333;
 		}
 	</style>

@@ -30,6 +30,7 @@
 	}
 ?>
 <div id="topnav">
+	<a href="dashboard.php"><img src="/images/favicon.ico" alt="Logo"></a>
 	<a class="<?php echo $topnav_active["Home"]; ?>" href="dashboard.php">Home</a>
 	<a class="<?php echo $topnav_active["Docs"]; ?>" href="../README.md">Docs</a>
 	<a class="<?php echo $topnav_active["Demo"]; ?>" href="#two">Demo</a>

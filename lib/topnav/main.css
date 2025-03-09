@@ -21,12 +21,19 @@
 	text-align: center;
 	text-decoration: none; /* hide link underline */
 }
-#topnav .right-align {
-	margin-left: auto; /* Push the button to the right */
+#topnav img {
+    height: 40px;
+    vertical-align: middle;
+}
+#topnav a:has(img) {
+	padding: 4px 13px;
+}
+#topnav .active {
+	background-color: #04AA6D; /* highlights current location */
 }
 #topnav a:hover:not(.active) {
 	background-color: #111111;
 }
-#topnav .active {
-	background-color: #04AA6D; /* highlights current location */
+#topnav .right-align {
+	margin-left: auto; /* Push the button to the right */
 }
