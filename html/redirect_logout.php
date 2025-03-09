@@ -4,10 +4,3 @@
 	header("Location: login.php"); // Redirect to login page
 	exit();
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-</body>
-</html>
