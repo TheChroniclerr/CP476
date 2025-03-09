@@ -1,5 +1,7 @@
 <?php
-session_start();
+	session_start();
+	// Directory
+	$topnav_dir = '../lib/topnav/main.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +22,6 @@ session_start();
 		body {
 			margin: 0; /* remove webpage default spacing */
 		}
-
 		#page_body {
 			display: flex;
 			justify-content: left;
@@ -42,23 +43,23 @@ session_start();
 	</style>
 </head>
 <body>
-<?php
-$topnav_currpage = "Home";
-$curr_client = isset($_SESSION["user"]) ? $_SESSION["user"] : "Guest";
-include('../lib/topnav/main.php');
-?>
-<div id="page_body">
-	<div></div>
-	<div class="contents">
-		<h1>Welcome, <?php echo $curr_client; ?>!</h1>
-		<a rel="connection" href="connection.php">Connect to MySql database</a><br>
-		<a rel="database" href="database.php">Go to database</a><br>
-		<a title="don't click" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Don't Click</a><br>
-		<form action="/html/redirect_logout.php" method="post">
-			<input type="submit" value="Logout">
-		</form>
+	<?php
+		$topnav_currpage = "Home";
+		$curr_client = isset($_SESSION["user"]) ? $_SESSION["user"] : "Guest";
+		include($topnav_dir);
+	?>
+	<div id="page_body">
+		<div></div>
+		<div class="contents">
+			<h1>Welcome, <?php echo $curr_client; ?>!</h1>
+			<a rel="connection" href="connection.php">Connect to MySql database</a><br>
+			<a rel="database" href="database.php">Go to database</a><br>
+			<a title="don't click" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Don't Click</a><br>
+			<form action="/html/redirect_logout.php" method="post">
+				<input type="submit" value="Logout">
+			</form>
+		</div>
+		<div></div>
 	</div>
-	<div></div>
-</div>
 </body>
 </html>

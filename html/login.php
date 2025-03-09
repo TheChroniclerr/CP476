@@ -1,10 +1,11 @@
 <?php
-session_start();
-// Check if user is already logged in
-if (isset($_SESSION["user"])) {
-	header("Location: dashboard.php"); // redirect to user dashboard
-	exit();
-}
+	session_start();
+	if (isset($_SESSION["user"])) {
+		header("Location: dashboard.php");
+		exit();
+	}
+	// Directory
+	$login_dir = '../lib/modules/login/main.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,9 +35,9 @@ if (isset($_SESSION["user"])) {
 	</style>
 </head>
 <body>
-<h2 class="login-icon">Login</h2>
-<?php
-include('../lib/modules/login/main.php');
-?>
+	<h2 class="login-icon">Login</h2>
+	<?php
+		include($login_dir);
+	?>
 </body>
 </html>

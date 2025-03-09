@@ -1,9 +1,14 @@
 <?php
-session_start();
-if(!isset($_SESSION["user"])) {
-	header("Location: login.php");
-	exit();
-}
+	session_start();
+	if(!isset($_SESSION["user"])) {
+		header("Location: login.php");
+		exit();
+	}
+	// Directory
+	$topnav_dir = '../lib/topnav/main.php';
+	$db_connection_dir = '../lib/modules/db_connection/main.php';
+	$db_query_dir = '../lib/modules/db_query/main.php';
+	$db_query_result = '../lib/modules/db_query_result/main.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -27,19 +32,16 @@ if(!isset($_SESSION["user"])) {
 	</style>
 </head>
 <body>
-<?php 
-$topnav_currpage = "Database";
-include('../lib/topnav/main.php');
-
-include('../lib/modules/db_connection/main.php');
-
-$query_display = "query-field-hidden";
-if(isset($_SESSION["password"])) {
-	$query_display = "query-field";
-}
-include('../lib/modules/db_query/main.php');
-
-include('../lib/modules/db_query_result/main.php');
-?>
+	<?php 
+		$topnav_currpage = "Database";
+		$query_display = "query-field-hidden";
+		include($topnav_dir);
+		include($db_connection_dir);
+		if(isset($_SESSION["password"])) {
+			$query_display = "query-field";
+		}
+		include($db_query_dir);
+		include($db_query_result);
+	?>
 </body>
 </html>
